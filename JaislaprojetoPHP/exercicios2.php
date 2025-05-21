@@ -13,7 +13,7 @@ function calcularProduto($valorProduto, &$lucro){
 echo "O valor do produto é:R$ ".calcularProduto($valorProduto, $lucro);
 echo "<br>";
 echo "O valor do lucro é:R$".$lucro*100;
-*/
+
 
 
 //Calcular se é Par ou Impar
@@ -27,3 +27,15 @@ function parOuImpar($numero){
 }
 
 parOuImpar(1);
+*/
+
+// calcular área de uma circunferência
+function calcularArea($raio, $pi){
+
+          return $pi*($raio*$raio);
+
+}
+$resultado = calcularArea(15,3.14);
+printf("A área da minha circunferência é %.3f", $resultado);
+
+?>
