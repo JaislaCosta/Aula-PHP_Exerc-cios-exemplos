@@ -1,50 +1,110 @@
 <?php
 /*
-//continuação: exercício 4 e 5
-$numero = 2;
-$texto = "O mês e maio já foi embora!";
-$falso = TRUE;
-$variaveis = array("numero"=>1, "falso" =>TRUE);
-var_dump($numero);
-var_dump($texto);
-var_dump($falso);
-var_dump($variaveis);
+//PHP parte 6:
+//Função para contar caracteres
+echo strlen("Brasília patrimônio da humanidade!");
+echo "<br><br>";
 
-//Cada Array é composto por dois componentes: chave e um valor
-$chamada = array(0 =>"Ana Priscila", 1 => "Bianca Olivia", 2 =>"Carolina Silva", 3 =>"Davi Felipe", 4 =>"Eduardo Costa");
-echo "$chamada[0]";
+//Função para contar palavras
+echo str_word_count("Brasília é linda!");
+echo "<br><br>";
 
-$capitas = array(0 =>"Brasília", 1 =>"São Paulo", 2 =>"Rio de Janeiro", 3 =>"Salvador");
-printf("A capital do Brasil: %s",$capitais[0]);
+//Função que procura na string um determinado caractere e retorna o valor da sua posição
+echo strpos("Joao Ferreira","e");
+echo "<br><br>";
 
-$estados = [0=>"Ceará"];
+//Funções para alterar a escrita da string 
+echo strtoupper("eu amo programar em PHP");
 echo "<br>";
-printf("O %s fico no nordeste",$estados[0]);
+echo strtolower("AGORA FAZ TODO SENTIDO!");
+echo "<br><br>";
 
-//Arrays Multidimensionais (um Array dentro de outro Array)
-$estados = array("Distrito Federal"=>array("capital"=>"Brasília", "população"=>"2.890.900"));
-echo $estados["Distrito Federal"]["capital"];
+//Função para substituir caracteres em uma string
+$nome = "Vasco da Gama";
+echo str_replace("Vasco", "Vitorioso", $nome);
+echo "<br><br>";
 
-//Criar arrays
-$chamada = array();
+//Função para reverter uma string
+echo strrev("Joao Silva");
+echo "<br>";
+//Função para remover espaços em branco de uma string
+$nome = "Joao Silva";
+echo trim($nome);
+echo "<br><br>";
 
-$chamada1 = array(0=>"Bianca");
-$chamada2[]= "teste";
-$chamada2[1]= "teste2";
+$nome1 = " Joao Silva";
+$nome2 = "Paula Fernandes";
+echo "<form>";
+echo "<label>Nome <label>";
+echo "<input type=tet nome=nome1 value='".trim($nome1)."'>";
+echo "<br>";
+echo "<label>Nome <label>";
+echo "<input type=tet nome=nome2 value='".trim($nome2)."'>";
+echo "<br><br>"; 
 
-var_dump($chamada2);
+//Função para concatenar(juntar) strings diferentes
+$ola = "Olá";
+$mundo = "Mundo!";
+$completo = $ola . $mundo;
+echo $completo;
+echo "<br><br>";
 
-//Exercício 1: Array com chave, valor
-$frutas = array(0=>"Banana", 1=>"Morango", 2=>"Ameixa", 3=>"Manga", 4=>"Laranja");
-echo "$frutas[2]";
-//Exercício 2: Array multidimensional com dados semelhantes
-$frutas = array("frutasVermelhas"=>array("morango"=>"torta", "acerola"=>"suco", "pitaia"=>"caro", "tomate"=>"molho"));
-echo $frutas["frutasVermelhas"]["acerola"];
+//Função para retirar a quantidade necessária de uma string
+echo $y = ("Joao Celestino da Silva");
+echo substr($y,9);
+echo "<br><br>";
+
+//Função para retornar qual é o tipo davariável e o valor que está atribuído a ela
+$numero = 1;
+$float = 1.3;
+$string = "Cadeira de Caracteres";
+$chamada = array("Ana", "Bruna");
+TRUE;
+$verdadeiro = TRUE;
+$nulo = null;
+
+var_dump($numero);
+echo "<br>";
+var_dump($float);
+echo "<br>";
+var_dump($string);
+echo "<br>";
+var_dump($chamada);
+echo "<br>";
+var_dump($verdadeiro);
+echo "<br>";
+var_dump($nulo);
+echo "<br>";
+ 
+
+ //Exercício1
+ $nome = "Fernando Silva";
+ echo strpos("Fernando Silva", "Silva");
+ echo "<br><br>";
+ //mais elaborado
+ $nome1 = "Fernando Silva";
+ echo strpos("Fernando Silva", "S");
+ if ($nome1) {
+   echo ") nome $noome foi encontrado!";
+ }else {
+    echo "O nome $nome NAO foi encontrado";
+ }
 */
-//Array com os valores que vão de 0 a 6 utilizando a função range();
-$facesDado = range(0,6);
+ //Exercício2
+ $maiuscula = strtoupper("essa frase sera maiuscula");
+ $minuscula = strtolower("ESSA FRASE E MINUSCULA");
+ echo " ".$maiuscula;
+ echo "<br>";
+ echo " ".$minuscula;
 
-foreach($facesDado as $valor) {
-   printf("%d ",$valor);
-}
+ //Exercício3
+ $frase = "Aquela Frase";
+ $frase1 = str_replace("Aquela", "Essa", $frase);
+ echo "<br>";
+ printf("A frase alterada: $frase1");
+
+
+
+
+ 
 ?>
