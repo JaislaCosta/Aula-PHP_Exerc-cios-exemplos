@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>  <!--Enviar dados para PHP-->
+    <h2>Escolher Linguagem Preferida</h2>
+    <form action="teste.php" method="post">
+        <input type="checkbox" name="linguagens[]" value="csharp">C# 
+        <input type="checkbox" name="linguagens[]" value="javascript">javascript
+        <input type="checkbox" name="linguagens[]" value="perl">perl
+        <input type="checkbox" name="linguagens[]" value="php">PHP
+        <input type="submit" name="enviar" value="Enviar">
+    </form>
+</body>
+</html>
